@@ -119,7 +119,7 @@ class Widget(QWidget):
                 platform_sel = 'PS4'
             if self.xboxPlatform.isChecked():
                 platform_sel = 'XBOX'
-            if self.xboxPlatform.isChecked():
+            if self.sherpaPlatform.isChecked():
                 platform_sel = 'Sherpa'
             boostercuttext = str(self.boosterCut.text())
             platform_note = f"{platform_sel} - {boostercuttext} - {platform}"
