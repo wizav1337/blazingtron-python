@@ -4,6 +4,7 @@ from pathlib import Path
 import sys
 
 from PySide6.QtWidgets import QApplication, QWidget
+from PySide6.QtGui import QClipboard
 from PySide6.QtCore import QFile, QObject
 from PySide6.QtUiTools import QUiLoader
 
@@ -23,9 +24,18 @@ class Widget(QWidget):
         self.cut40 = self.findChild(QObject, 'cut40')
         self.cut50 = self.findChild(QObject, 'cut50')
         self.exit1 = self.findChild(QObject, 'exit1')
+        self.boosterNote = self.findChild(QObject, 'boosterNote')
+        self.noteValue = self.findChild(QObject, 'noteValue')
         self.boosterCut = self.findChild(QObject, 'boosterCut')
+        self.pcPlatform = self.findChild(QObject, 'pcPlatform')
+        self.xboxPlatform = self.findChild(QObject, 'xboxPlatform')
+        self.ps4Platform = self.findChild(QObject, 'ps4Platform')
+        self.sherpaPlatform = self.findChild(QObject, 'sherpaPlatform')
+        self.noteCopy = self.findChild(QObject, 'noteCopy')
+        self.copied = self.findChild(QObject, 'copied')
         self.leServiceValue.textChanged.connect(self.update_vip_price)
         self.leServiceValue.textChanged.connect(self.update_cut_price)
+        self.boosterNote.textChanged.connect(self.update_platform)
         self.popust0.toggled.connect(self.update_vip_price)
         self.popust7.toggled.connect(self.update_vip_price)
         self.popust10.toggled.connect(self.update_vip_price)
@@ -34,10 +44,15 @@ class Widget(QWidget):
         self.popust7.toggled.connect(self.update_cut_price)
         self.popust10.toggled.connect(self.update_cut_price)
         self.popust12.toggled.connect(self.update_cut_price)
+        self.pcPlatform.toggled.connect(self.update_platform)
+        self.xboxPlatform.toggled.connect(self.update_platform)
+        self.ps4Platform.toggled.connect(self.update_platform)
+        self.sherpaPlatform.toggled.connect(self.update_platform)
         self.connect_radio_buttons()
         self.update_cut_price()
         self.update_vip_price()
         self.exit1.clicked.connect(self.close_application)
+        self.noteCopy.clicked.connect(self.copy_data)
 
     def load_ui(self):
         loader = QUiLoader()
@@ -56,6 +71,10 @@ class Widget(QWidget):
         self.cut35.toggled.connect(self.update_cut_price)
         self.cut40.toggled.connect(self.update_cut_price)
         self.cut50.toggled.connect(self.update_cut_price)
+        self.pcPlatform.toggled.connect(self.update_platform)
+        self.xboxPlatform.toggled.connect(self.update_platform)
+        self.ps4Platform.toggled.connect(self.update_platform)
+        self.sherpaPlatform.toggled.connect(self.update_platform)
 
     def update_vip_price(self):
             service_value = self.leServiceValue.text()
@@ -89,6 +108,28 @@ class Widget(QWidget):
             self.boosterCut.setText('€{:.2f}'.format(cut_price))
         else:
             self.boosterCut.setText('€0.00')
+
+    def update_platform(self):
+        platform = self.boosterNote.text()
+        if platform:
+            platform_sel = 'PC'
+            if self.pcPlatform.isChecked():
+                platform_sel = 'PC'
+            if self.ps4Platform.isChecked():
+                platform_sel = 'PS4'
+            if self.xboxPlatform.isChecked():
+                platform_sel = 'XBOX'
+            if self.xboxPlatform.isChecked():
+                platform_sel = 'Sherpa'
+            boostercuttext = str(self.boosterCut.text())
+            platform_note = f"{platform_sel} - {boostercuttext} - {platform}"
+            self.noteValue.setText(platform_note)
+
+    def copy_data(self):
+        self.copied.setText('copied')
+        clipboard = QApplication.clipboard()
+        clipboard.setText(self.noteValue.text())
+
 
     def close_application(self):
         QApplication.quit()

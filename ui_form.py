@@ -23,6 +23,9 @@ class Ui_Widget(object):
         if not Widget.objectName():
             Widget.setObjectName(u"Widget")
         Widget.resize(543, 557)
+        icon = QIcon()
+        icon.addFile(u"blazing.png", QSize(), QIcon.Normal, QIcon.Off)
+        Widget.setWindowIcon(icon)
         self.naslov = QLabel(Widget)
         self.naslov.setObjectName(u"naslov")
         self.naslov.setGeometry(QRect(20, 10, 331, 51))
@@ -136,13 +139,19 @@ class Ui_Widget(object):
         self.boosterNote.setGeometry(QRect(30, 470, 481, 31))
         self.noteValue = QLabel(Widget)
         self.noteValue.setObjectName(u"noteValue")
-        self.noteValue.setGeometry(QRect(30, 520, 121, 31))
+        self.noteValue.setGeometry(QRect(30, 520, 511, 31))
         font4 = QFont()
         font4.setPointSize(15)
         font4.setBold(True)
         font4.setUnderline(False)
         self.noteValue.setFont(font4)
         self.noteValue.setAutoFillBackground(True)
+        self.copied = QLabel(Widget)
+        self.copied.setObjectName(u"copied")
+        self.copied.setGeometry(QRect(330, 420, 66, 18))
+        font5 = QFont()
+        font5.setBold(True)
+        self.copied.setFont(font5)
 
         self.retranslateUi(Widget)
 
@@ -150,7 +159,7 @@ class Ui_Widget(object):
     # setupUi
 
     def retranslateUi(self, Widget):
-        Widget.setWindowTitle(QCoreApplication.translate("Widget", u"Widget", None))
+        Widget.setWindowTitle(QCoreApplication.translate("Widget", u"Blazingtron 1.0", None))
         self.naslov.setText(QCoreApplication.translate("Widget", u"VIP Blazingtron 1.0", None))
         self.serviceValue.setText(QCoreApplication.translate("Widget", u"Service Value:", None))
         self.euroSymbol.setText(QCoreApplication.translate("Widget", u"\u20ac", None))
@@ -176,5 +185,6 @@ class Ui_Widget(object):
         self.sherpaPlatform.setText(QCoreApplication.translate("Widget", u"Sherpa", None))
         self.label.setText("")
         self.noteValue.setText(QCoreApplication.translate("Widget", u"-waiting-", None))
+        self.copied.setText("")
     # retranslateUi
 
