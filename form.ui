@@ -1,0 +1,461 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Widget</class>
+ <widget class="QWidget" name="Widget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>543</width>
+    <height>557</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Widget</string>
+  </property>
+  <widget class="QLabel" name="naslov">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>10</y>
+     <width>331</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>29</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>VIP Blazingtron 1.0</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="serviceValue">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>70</y>
+     <width>131</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>15</pointsize>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>Service Value:</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="leServiceValue">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>100</y>
+     <width>201</width>
+     <height>31</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="euroSymbol">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>100</y>
+     <width>66</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>20</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>€</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="serviceValue_2">
+   <property name="geometry">
+    <rect>
+     <x>280</x>
+     <y>70</y>
+     <width>91</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>15</pointsize>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>VIP price:</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="vipPrice">
+   <property name="geometry">
+    <rect>
+     <x>280</x>
+     <y>100</y>
+     <width>121</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>20</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>€0.00</string>
+   </property>
+  </widget>
+  <widget class="QRadioButton" name="popust7">
+   <property name="geometry">
+    <rect>
+     <x>410</x>
+     <y>90</y>
+     <width>109</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>  7% discount</string>
+   </property>
+   <attribute name="buttonGroup">
+    <string notr="true">buttonGroup1</string>
+   </attribute>
+  </widget>
+  <widget class="QRadioButton" name="popust10">
+   <property name="geometry">
+    <rect>
+     <x>410</x>
+     <y>120</y>
+     <width>109</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>10% discount</string>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <attribute name="buttonGroup">
+    <string notr="true">buttonGroup1</string>
+   </attribute>
+  </widget>
+  <widget class="QRadioButton" name="popust12">
+   <property name="geometry">
+    <rect>
+     <x>410</x>
+     <y>150</y>
+     <width>109</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>12% discount</string>
+   </property>
+   <attribute name="buttonGroup">
+    <string notr="true">buttonGroup1</string>
+   </attribute>
+  </widget>
+  <widget class="QLabel" name="serviceValue_3">
+   <property name="geometry">
+    <rect>
+     <x>430</x>
+     <y>30</y>
+     <width>91</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>15</pointsize>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>Popust:</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="serviceValue_4">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>150</y>
+     <width>131</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>15</pointsize>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>Boosters Cut:</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="boosterCut">
+   <property name="geometry">
+    <rect>
+     <x>70</x>
+     <y>190</y>
+     <width>171</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>28</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>€0.00</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="serviceValue_5">
+   <property name="geometry">
+    <rect>
+     <x>410</x>
+     <y>190</y>
+     <width>111</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>15</pointsize>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>Booster cut:</string>
+   </property>
+  </widget>
+  <widget class="QRadioButton" name="cut30">
+   <property name="geometry">
+    <rect>
+     <x>410</x>
+     <y>230</y>
+     <width>109</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>30% Cut</string>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <attribute name="buttonGroup">
+    <string notr="true">buttonGroup</string>
+   </attribute>
+  </widget>
+  <widget class="QRadioButton" name="cut35">
+   <property name="geometry">
+    <rect>
+     <x>410</x>
+     <y>260</y>
+     <width>109</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>35% Cut</string>
+   </property>
+   <attribute name="buttonGroup">
+    <string notr="true">buttonGroup</string>
+   </attribute>
+  </widget>
+  <widget class="QRadioButton" name="cut40">
+   <property name="geometry">
+    <rect>
+     <x>410</x>
+     <y>290</y>
+     <width>109</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>40% Cut</string>
+   </property>
+   <attribute name="buttonGroup">
+    <string notr="true">buttonGroup</string>
+   </attribute>
+  </widget>
+  <widget class="QRadioButton" name="cut50">
+   <property name="geometry">
+    <rect>
+     <x>410</x>
+     <y>320</y>
+     <width>109</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>50% Cut</string>
+   </property>
+   <attribute name="buttonGroup">
+    <string notr="true">buttonGroup</string>
+   </attribute>
+  </widget>
+  <widget class="QPushButton" name="exit1">
+   <property name="geometry">
+    <rect>
+     <x>410</x>
+     <y>360</y>
+     <width>101</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Exit</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="noteCopy">
+   <property name="geometry">
+    <rect>
+     <x>410</x>
+     <y>410</y>
+     <width>101</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Copy Note</string>
+   </property>
+  </widget>
+  <widget class="QRadioButton" name="popust0">
+   <property name="geometry">
+    <rect>
+     <x>410</x>
+     <y>60</y>
+     <width>109</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>  0% discount</string>
+   </property>
+   <attribute name="buttonGroup">
+    <string notr="true">buttonGroup1</string>
+   </attribute>
+  </widget>
+  <widget class="QRadioButton" name="pcPlatform">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>280</y>
+     <width>109</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>PC Platform</string>
+   </property>
+  </widget>
+  <widget class="QRadioButton" name="ps4Platform">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>310</y>
+     <width>109</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>PS4 Platform</string>
+   </property>
+  </widget>
+  <widget class="QRadioButton" name="xboxPlatform">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>340</y>
+     <width>131</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>XBOX Platform</string>
+   </property>
+  </widget>
+  <widget class="QRadioButton" name="sherpaPlatform">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>370</y>
+     <width>109</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Sherpa</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>230</x>
+     <y>240</y>
+     <width>111</width>
+     <height>171</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap>blazing.png</pixmap>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="boosterNote">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>470</y>
+     <width>481</width>
+     <height>31</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="noteValue">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>520</y>
+     <width>121</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>15</pointsize>
+     <bold>true</bold>
+     <underline>false</underline>
+    </font>
+   </property>
+   <property name="autoFillBackground">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>-waiting-</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+ <buttongroups>
+  <buttongroup name="buttonGroup1"/>
+  <buttongroup name="buttonGroup"/>
+ </buttongroups>
+</ui>
